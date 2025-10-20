@@ -1,0 +1,1 @@
+This is a placeholder. Replace this file with a real PNG at assets/icon.png (512x512) for app icon.
