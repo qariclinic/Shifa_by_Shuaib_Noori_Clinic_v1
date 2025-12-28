@@ -1,42 +1,35 @@
-name: Flutter Build APK
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches: [main]
 
-env:
-  FLUTTER_VERSION: "3.19.5"
+permissions:
+  contents: write
+  pages: write
+  id-token: write
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
-
+    
     steps:
-    - name: Checkout code
+    - name: Checkout
       uses: actions/checkout@v4
 
-    - name: Setup Flutter
-      uses: subosito/flutter-action@v2
-      with:
-        flutter-version: ${{ env.FLUTTER_VERSION }}
-        cache: true
+    - name: Setup Pages
+      uses: actions/configure-pages@v4
 
-    - name: Check Flutter environment
+    - name: Build (if needed)
       run: |
-        flutter --version
-        flutter doctor
-
-    - name: Get dependencies
-      run: flutter pub get
-
-    - name: Build APK (Debug)
-      run: flutter build apk --debug --verbose
-
-    - name: Upload APK
-      uses: actions/upload-artifact@v4
+        # اگر build process ہے تو یہاں
+        # ورنہ خالی چھوڑ دیں
+        echo "No build step needed for static site"
+        
+    - name: Upload to Pages
+      uses: actions/upload-pages-artifact@v3
       with:
-        name: salat-watch-apk
-        path: build/app/outputs/flutter-apk/app-debug.apk
-        retention-days: 7
+        path: "."  # یا اپنا build folder کا پتہ
+
+    - name: Deploy
+      uses: actions/deploy-pages@v4
