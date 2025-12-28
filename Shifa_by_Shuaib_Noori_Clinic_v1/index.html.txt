@@ -1,9 +1,9 @@
-
-# پھر اپ لوڈ کریں
-git add . git commit -m "مزید تبدیلیاں"<!DOCTYPE html> <html lang="ur" 
-dir="rtl"> <head> git push origin main <meta charset="UTF-8">
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>شفا - ڈاکٹر مفتی محمد شعیب خان آلائی کلینک</title>
+    <title>??? - ???? ???? ?????</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -14,18 +14,18 @@ dir="rtl"> <head> git push origin main <meta charset="UTF-8">
         <div class="container">
             <a href="#" class="logo">
                 <i class="fas fa-hospital"></i>
-                <span>شفا کلینک</span>
+                <span>??? ?????</span>
             </a>
             <div class="nav-toggle" id="navToggle">
                 <i class="fas fa-bars"></i>
             </div>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="active">ہوم</a></li>
-                <li><a href="#about">ہمارے بارے میں</a></li>
-                <li><a href="#services">سہولیات</a></li>
-                <li><a href="#doctors">ڈاکٹرز</a></li>
-                <li><a href="#appointment">اپائنٹمنٹ</a></li>
-                <li><a href="#contact">رابطہ</a></li>
+                <li><a href="#home" class="active">???</a></li>
+                <li><a href="#about">????? ???? ???</a></li>
+                <li><a href="#services">???????</a></li>
+                <li><a href="#doctors">??????</a></li>
+                <li><a href="#appointment">?????????</a></li>
+                <li><a href="#contact">?????</a></li>
             </ul>
         </div>
     </nav>
@@ -34,13 +34,12 @@ dir="rtl"> <head> git push origin main <meta charset="UTF-8">
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <h1>شفا کلینک میں خوش آمدید</h1>
-                <h2>ڈاکٹر مفتی محمد شعیب خان آلائی</h2>
-                <p>ایم بی بی ایس، ایم ڈی - ماہر امراض</p>
-                <p>اعلی معیار کی طبی خدمات اور مریضوں کی مکمل دیکھ بھال</p>
+                <h1>??? ????? ??? ??? ?????</h1>
+                <h2>????? ???? ????</h2>
+                <p>???? ????? ?? ??? ????? ??? ?????? ?? ???? ???? ????</p>
                 <div class="hero-buttons">
-                    <a href="#appointment" class="btn btn-primary">اپائنٹمنٹ بک کریں</a>
-                    <a href="#contact" class="btn btn-secondary">رابطہ کریں</a>
+                    <a href="#appointment" class="btn btn-primary">????????? ?? ????</a>
+                    <a href="#contact" class="btn btn-secondary">????? ????</a>
                 </div>
             </div>
             <div class="hero-image">
@@ -53,30 +52,30 @@ dir="rtl"> <head> git push origin main <meta charset="UTF-8">
     <section class="about" id="about">
         <div class="container">
             <div class="section-header">
-                <h2>ہمارے بارے میں</h2>
-                <p>ہماری خدمات اور مقاصد</p>
+                <h2>????? ???? ???</h2>
+                <p>????? ????? ??? ?????</p>
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <h3>شفا کلینک کی کہانی</h3>
-                    <p>شفا کلینک ایک معروف طبی مرکز ہے جہاں ڈاکٹر مفتی محمد شعیب خان آلائی اور ان کی ماہر ٹیم اعلی معیار کی طبی خدمات فراہم کرتی ہے۔ ہمارا مقصد ہر مریض کو بہترین علاج اور دیکھ بھال فراہم کرنا ہے۔</p>
-                    <p>ڈاکٹر مفتی محمد شعیب خان آلائی نے اپنی تعلیم مکمل کرنے کے بعد سالوں سے مریضوں کی خدمت کر رہے ہیں اور مختلف طبی کانفرنسز میں حصہ لیتے رہتے ہیں۔</p>
+                    <h3>??? ????? ?? ?????</h3>
+                    <p>??? ????? ??? ????? ??? ???? ?? ???? ????? ???? ???? ??? ?? ?? ???? ??? ???? ????? ?? ??? ????? ????? ???? ??? ????? ???? ?? ???? ?? ?????? ???? ??? ???? ???? ????? ???? ???</p>
+                    <p>?? ???? ???? ??? ????? ???? ??????? ???? ??? ???? ?????? ?? ???? ??? ???? ???? ?? ????</p>
                     <div class="features">
                         <div class="feature">
                             <i class="fas fa-user-md"></i>
-                            <span>ماہر ڈاکٹرز</span>
+                            <span>???? ??????</span>
                         </div>
                         <div class="feature">
                             <i class="fas fa-clock"></i>
-                            <span>24/7 ایمرجنسی</span>
+                            <span>24/7 ????????</span>
                         </div>
                         <div class="feature">
                             <i class="fas fa-stethoscope"></i>
-                            <span>جدید آلات</span>
+                            <span>???? ????</span>
                         </div>
                         <div class="feature">
                             <i class="fas fa-heart"></i>
-                            <span>پیارا رویہ</span>
+                            <span>????? ????</span>
                         </div>
                     </div>
                 </div>
@@ -91,51 +90,51 @@ dir="rtl"> <head> git push origin main <meta charset="UTF-8">
     <section class="services" id="services">
         <div class="container">
             <div class="section-header">
-                <h2>ہماری سہولیات</h2>
-                <p>ہماری تمام طبی خدمات</p>
+                <h2>????? ???????</h2>
+                <p>????? ???? ??? ?????</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-heartbeat"></i>
                     </div>
-                    <h3>کارڈیالوجی</h3>
-                    <p>دل کی بیماریوں کی تشخیص اور علاج</p>
+                    <h3>??????????</h3>
+                    <p>?? ?? ???????? ?? ????? ??? ????</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-brain"></i>
                     </div>
-                    <h3>نیورالوجی</h3>
-                    <p>دماغ اور اعصابی بیماریوں کا علاج</p>
+                    <h3>?????????</h3>
+                    <p>???? ??? ?????? ???????? ?? ????</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-lungs"></i>
                     </div>
-                    <h3>نمونیا کا علاج</h3>
-                    <p>سانس کی بیماریوں کا علاج</p>
+                    <h3>?????? ?? ????</h3>
+                    <p>???? ?? ???????? ?? ????</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-bone"></i>
                     </div>
-                    <h3>ارتھوپیڈکس</h3>
-                    <p>ہڈیوں اور جوڑوں کا علاج</p>
+                    <h3>??????????</h3>
+                    <p>????? ??? ????? ?? ????</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-child"></i>
                     </div>
-                    <h3>پیڈیاٹرکس</h3>
-                    <p>بچوں کی بیماریوں کا علاج</p>
+                    <h3>?????????</h3>
+                    <p>???? ?? ???????? ?? ????</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-eye"></i>
                     </div>
-                    <h3>آئی کیئر</h3>
-                    <p>آنکھوں کی بیماریوں کا علاج</p>
+                    <h3>??? ????</h3>
+                    <p>?????? ?? ???????? ?? ????</p>
                 </div>
             </div>
         </div>
@@ -145,18 +144,17 @@ dir="rtl"> <head> git push origin main <meta charset="UTF-8">
     <section class="doctors" id="doctors">
         <div class="container">
             <div class="section-header">
-                <h2>ہمارے ڈاکٹرز</h2>
-                <p>ہمارے ماہر ڈاکٹرز</p>
+                <h2>????? ??????</h2>
+                <p>????? ???? ??????</p>
             </div>
             <div class="doctors-grid">
                 <div class="doctor-card">
                     <div class="doctor-image">
-                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Dr. Shuaib Khan Alai">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Dr. Shuaib Noori">
                     </div>
-                    <h3>ڈاکٹر مفتی محمد شعیب خان آلائی</h3>
-                    <p>ایم بی بی ایس، ایم ڈی</p>
-                    <p>ماہر امراض - جنرل فزیشن</p>
-                    <p class="experience">20+ سال کا تجربہ</p>
+                    <h3>????? ???? ????</h3>
+                    <p>??? ?? ?? ???? ??? ?? ?? ???</p>
+                    <p>???? ????</p>
                     <div class="doctor-social">
                         <a href="#"><i class="fab fa-whatsapp"></i></a>
                         <a href="#"><i class="fab fa-facebook"></i></a>
@@ -167,10 +165,9 @@ dir="rtl"> <head> git push origin main <meta charset="UTF-8">
                     <div class="doctor-image">
                         <img src="https://images.unsplash.com/photo-1591604021695-0c69b7c05981?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Dr. Ayesha">
                     </div>
-                    <h3>ڈاکٹر عائشہ پروین</h3>
-                    <p>ایم بی بی ایس، ایم سی پی ایس</p>
-                    <p>ماہر امراض اطفال</p>
-                    <p class="experience">15+ سال کا تجربہ</p>
+                    <h3>????? ????? ???</h3>
+                    <p>??? ?? ?? ???? ??? ?? ?? ???</p>
+                    <p>???? ????? ?????</p>
                     <div class="doctor-social">
                         <a href="#"><i class="fab fa-whatsapp"></i></a>
                         <a href="#"><i class="fab fa-facebook"></i></a>
@@ -181,10 +178,9 @@ dir="rtl"> <head> git push origin main <meta charset="UTF-8">
                     <div class="doctor-image">
                         <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Dr. Ahmed">
                     </div>
-                    <h3>ڈاکٹر احمد رضا</h3>
-                    <p>ایم بی بی ایس، ایم آر سی پی</p>
-                    <p>ماہر امراض قلب</p>
-                    <p class="experience">18+ سال کا تجربہ</p>
+                    <h3>????? ???? ???</h3>
+                    <p>??? ?? ?? ???? ??? ?? ?? ??</p>
+                    <p>???? ????? ???</p>
                     <div class="doctor-social">
                         <a href="#"><i class="fab fa-whatsapp"></i></a>
                         <a href="#"><i class="fab fa-facebook"></i></a>
@@ -199,47 +195,47 @@ dir="rtl"> <head> git push origin main <meta charset="UTF-8">
     <section class="appointment" id="appointment">
         <div class="container">
             <div class="section-header">
-                <h2>اپائنٹمنٹ بک کریں</h2>
-                <p>اپنی اپائنٹمنٹ ابھی بک کروائیں</p>
+                <h2>????????? ?? ????</h2>
+                <p>???? ????????? ???? ?? ???????</p>
             </div>
             <div class="appointment-form">
                 <form id="bookingForm">
                     <div class="form-group">
-                        <input type="text" id="name" placeholder="آپ کا نام" required>
+                        <input type="text" id="name" placeholder="?? ?? ???" required>
                     </div>
                     <div class="form-group">
-                        <input type="tel" id="phone" placeholder="فون نمبر" required>
+                        <input type="tel" id="phone" placeholder="??? ????" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" placeholder="ای میل">
+                        <input type="email" id="email" placeholder="?? ???">
                     </div>
                     <div class="form-group">
                         <select id="doctor" required>
-                            <option value="">ڈاکٹر منتخب کریں</option>
-                            <option value="Dr. Shuaib">ڈاکٹر مفتی محمد شعیب خان آلائی</option>
-                            <option value="Dr. Ayesha">ڈاکٹر عائشہ پروین</option>
-                            <option value="Dr. Ahmed">ڈاکٹر احمد رضا</option>
+                            <option value="">????? ????? ????</option>
+                            <option value="Dr. Shuaib">????? ???? ????</option>
+                            <option value="Dr. Ayesha">????? ????? ???</option>
+                            <option value="Dr. Ahmed">????? ???? ???</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <input type="date" id="date" required>
                     </div>
                     <div class="form-group">
-                        <textarea id="message" placeholder="اپنی تکلیف کے بارے میں تفصیل" rows="4"></textarea>
+                        <textarea id="message" placeholder="???? ????? ?? ???? ??? ?????" rows="4"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">اپائنٹمنٹ بک کریں</button>
+                    <button type="submit" class="btn btn-primary">????????? ?? ????</button>
                 </form>
                 <div class="appointment-info">
-                    <h3>ہمارے اوقات کار</h3>
+                    <h3>????? ????? ???</h3>
                     <ul>
-                        <li><strong>سوموار - جمعہ:</strong> صبح 9 بجے سے شام 9 بجے تک</li>
-                        <li><strong>ہفتہ:</strong> صبح 9 بجے سے دوپہر 2 بجے تک</li>
-                        <li><strong>اتوار:</strong> صرف ایمرجنسی</li>
+                        <li><strong>?????? - ????:</strong> ??? 9 ??? ?? ??? 9 ??? ??</li>
+                        <li><strong>????:</strong> ??? 9 ??? ?? ????? 2 ??? ??</li>
+                        <li><strong>?????:</strong> ??? ????????</li>
                     </ul>
                     <div class="contact-info">
                         <p><i class="fas fa-phone"></i> 0300-1234567</p>
-                        <p><i class="fas fa-envelope"></i> drshuaib@shifaclinic.com</p>
-                        <p><i class="fas fa-map-marker-alt"></i> بلاک 5، گلشن اقبال، کراچی</p>
+                        <p><i class="fas fa-envelope"></i> info@shifaclinic.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> ???? 5? ???? ?????? ?????</p>
                     </div>
                 </div>
             </div>
@@ -250,16 +246,16 @@ dir="rtl"> <head> git push origin main <meta charset="UTF-8">
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-header">
-                <h2>رابطہ کریں</h2>
-                <p>ہم سے رابطے کے طریقے</p>
+                <h2>????? ????</h2>
+                <p>?? ?? ????? ?? ?????</p>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>ہمارا پتہ</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> بلاک 5، گلشن اقبال، کراچی، پاکستان</p>
+                    <h3>????? ???</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> ???? 5? ???? ?????? ?????? ???????</p>
                     <p><i class="fas fa-phone"></i> 0300-1234567, 021-1234567</p>
-                    <p><i class="fas fa-envelope"></i> drshuaib@shifaclinic.com</p>
-                    <p><i class="fas fa-clock"></i> سوموار - ہفتہ: 9AM - 9PM</p>
+                    <p><i class="fas fa-envelope"></i> info@shifaclinic.com</p>
+                    <p><i class="fas fa-clock"></i> ?????? - ????: 9AM - 9PM</p>
                     
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook"></i></a>
@@ -282,28 +278,28 @@ dir="rtl"> <head> git push origin main <meta charset="UTF-8">
             <div class="footer-content">
                 <div class="footer-logo">
                     <i class="fas fa-hospital"></i>
-                    <h3>شفا کلینک</h3>
-                    <p>ڈاکٹر مفتی محمد شعیب خان آلائی</p>
+                    <h3>??? ?????</h3>
+                    <p>?????? ??? ?? ???? ????</p>
                 </div>
                 <div class="footer-links">
-                    <h4>تیز لنکس</h4>
+                    <h4>??? ????</h4>
                     <ul>
-                        <li><a href="#home">ہوم</a></li>
-                        <li><a href="#about">ہمارے بارے میں</a></li>
-                        <li><a href="#services">سہولیات</a></li>
-                        <li><a href="#doctors">ڈاکٹرز</a></li>
+                        <li><a href="#home">???</a></li>
+                        <li><a href="#about">????? ???? ???</a></li>
+                        <li><a href="#services">???????</a></li>
+                        <li><a href="#doctors">??????</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
-                    <h4>رابطہ</h4>
+                    <h4>?????</h4>
                     <p><i class="fas fa-phone"></i> 0300-1234567</p>
-                    <p><i class="fas fa-envelope"></i> drshuaib@shifaclinic.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> گلشن اقبال، کراچی</p>
+                    <p><i class="fas fa-envelope"></i> info@shifaclinic.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> ???? ?????? ?????</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 شفا کلینک - ڈاکٹر مفتی محمد شعیب خان آلائی. تمام حقوق محفوظ ہیں۔</p>
-                <p>ماہر امراض | جنرل فزیشن | 20+ سال تجربہ</p>
+                <p>&copy; 2023 ??? ?????. ???? ???? ????? ????</p>
+                <p>?????? ????: ???? ???? ?????</p>
             </div>
         </div>
     </footer>
