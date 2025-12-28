@@ -1,48 +1,45 @@
-name: Continuous Integration
+name: Docker Build and Push
 
 on:
   push:
-    branches: [ main, develop ]
-  pull_request:
     branches: [ main ]
+    tags: [ 'v*' ]
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
 
 jobs:
-  quality-check:
+  build-and-push:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
 
     steps:
-    - name: Checkout code
+    - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+
+    - name: Log in to Container Registry
+      uses: docker/login-action@v3
       with:
-        node-version: '20.x'
-        cache: 'npm'
+        registry: ${{ env.REGISTRY }}
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Install dependencies
-      run: npm install
-
-    - name: Run security audit
-      run: npm audit --audit-level=moderate
-
-    - name: Check code formatting
-      run: npx prettier --check .
-
-    - name: Run ESLint
-      run: npm run lint
-
-    - name: Run tests
-      run: npm test
-
-    - name: Build project
-      run: npm run build
-
-    - name: Upload test results
-      uses: actions/upload-artifact@v4
-      if: always()
+    - name: Extract metadata
+      uses: docker/metadata-action@v5
+      id: meta
       with:
-        name: test-results
-        path: |
-          coverage/
-          test-results/
+        images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+
+    - name: Build and push Docker image
+      uses: docker/build-push-action@v5
+      with:
+        context: .
+        push: true
+        tags: ${{ steps.meta.outputs.tags }}
+        labels: ${{ steps.meta.outputs.labels }}
