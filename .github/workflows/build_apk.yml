@@ -1,4 +1,4 @@
-name: CI Pipeline
+name: Build and Deploy
 
 on:
   push:
@@ -7,45 +7,56 @@ on:
     branches: [ main ]
 
 jobs:
-  test-and-build:
+  build:
     runs-on: ubuntu-latest
-    
+
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+
     steps:
-    - name: Checkout code
+    - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Setup Node.js
+    - name: Set up Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
-        node-version: '18'
-        cache: 'npm'
+        node-version: ${{ matrix.node-version }}
 
     - name: Install dependencies
       run: npm install
 
+    - name: Run linting
+      run: npm run lint
+
     - name: Run tests
-      run: |
-        if [ -f "package.json" ] && grep -q '"test"' package.json; then
-          npm test
-        else
-          echo "No test script found in package.json"
-        fi
+      run: npm test -- --passWithNoTests
 
     - name: Build project
-      run: |
-        if [ -f "package.json" ] && grep -q '"build"' package.json; then
-          npm run build
-        else
-          echo "No build script found in package.json"
-        fi
+      run: npm run build
 
-    - name: Upload build files
+    - name: Upload build artifacts
       uses: actions/upload-artifact@v4
-      if: success()
       with:
-        name: production-files
-        path: |
-          build/
-          dist/
-          public/
+        name: build-output
+        path: build/
         retention-days: 5
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - name: Download build artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: build-output
+        path: build/
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build
