@@ -1,54 +1,25 @@
-name: Build and Deploy
+name: Deploy Static Site
 
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
-
+    
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v4
+    - name: Setup static files
+      run: |
+        # صرف HTML/CSS/JS فائلوں کو build folder میں کاپی کریں
+        mkdir -p build
+        cp -r *.html *.css *.js build/ 2>/dev/null || true
+        
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        node-version: '18.x'
-        # Cache کو ہٹا دیں یا npm install کے بعد استعمال کریں
-        cache: 'npm'
-
-    - name: Install dependencies
-      run: |
-        # پہلے lock file کے بغیر install کریں
-        npm install --no-package-lock
-        # یا اگر آپ lock file بنانا چاہتے ہیں تو
-        # npm install
-
-    - name: Create package-lock.json if missing
-      run: |
-        if [ ! -f "package-lock.json" ]; then
-          npm init -y
-          npm install
-        fi
-
-    - name: Build project
-      run: |
-        # اگر build script موجود ہے تو
-        if [ -f "package.json" ] && grep -q '"build"' package.json; then
-          npm run build
-        else
-          echo "No build script found"
-          mkdir -p build
-          echo "Build directory created" > build/index.html
-        fi
-
-    - name: Upload build artifacts
-      uses: actions/upload-artifact@v4
-      with:
-        name: build-output
-        path: build/
-        retention-days: 5
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build
