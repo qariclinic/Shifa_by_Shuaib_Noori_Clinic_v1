@@ -1,25 +1,32 @@
-name: Deploy Static Site
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches: [ main ]
 
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    - name: Setup static files
-      run: |
-        # صرف HTML/CSS/JS فائلوں کو build folder میں کاپی کریں
-        mkdir -p build
-        cp -r *.html *.css *.js build/ 2>/dev/null || true
-        
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Build static site (if needed)
+        run: |
+          # Your build steps here
+          mkdir -p build
+          echo "Hello World" > build/index.html
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
