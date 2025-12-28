@@ -30,3 +30,4 @@ Important notes BEFORE building:
    - Edit lib/main.dart to change UI, languages (Urdu/Arabic), and features (Hijri conversion).
 
 Good luck! If you want, I can also prepare a full Android manifest and launcher icons — tell me and I'll extend the zip.
+# Shifa_by_Shuaib_Noori_Clinic_v1
