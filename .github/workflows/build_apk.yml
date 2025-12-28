@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 permissions:
   contents: write
@@ -10,23 +10,26 @@ permissions:
   id-token: write
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
+    
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+    - name: Checkout
+      uses: actions/checkout@v4
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
+    - name: Setup Pages
+      uses: actions/configure-pages@v4
 
-      - name: Build static site (if needed)
-        run: |
-          # Your build steps here
-          mkdir -p build
-          echo "Hello World" > build/index.html
+    - name: Build (if needed)
+      run: |
+        # اگر build process ہے تو یہاں
+        # ورنہ خالی چھوڑ دیں
+        echo "No build step needed for static site"
+        
+    - name: Upload to Pages
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: "."  # یا اپنا build folder کا پتہ
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+    - name: Deploy
+      uses: actions/deploy-pages@v4
